@@ -12,8 +12,8 @@ node 'dean-ubu' {
 node 'dean-aps1' {
   user { 'art':
     ensure => present,
-    comment => 'Art Vanderlay'
-    home => '/home/art'
+    comment => 'Art Vanderlay',
+    home => '/home/art',
     managehome => true,
   }
   ssh_authorized_key { 'art_ssh':
