@@ -11,6 +11,7 @@ node 'dean-ubu' {
 
 node 'dean-aws1' {
   include ssh
+  include sudoers
   user { 'art':
     ensure => present,
     comment => 'Art Vanderlay',
