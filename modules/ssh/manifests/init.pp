@@ -6,7 +6,7 @@ class ssh {
  
   file { '/etc/ssh/sshd_config':
     source => 'puppet:///modules/ssh/sshd_config',
-    notify => Service['ssh'],
+    notify => Service['sshd'],
     owner => 'root',
     group => 'root',
   }
