@@ -9,7 +9,7 @@ node 'dean-ubu' {
 
 }
 
-node 'dean-aps1' {
+node 'dean-aws1' {
   user { 'art':
     ensure => present,
     comment => 'Art Vanderlay',
