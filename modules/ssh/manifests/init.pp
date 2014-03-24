@@ -1,6 +1,6 @@
 # Manage the SSH service
 class ssh {
-  service { 'ssh':
+  service { 'sshd':
     ensure => running,
   }
  
