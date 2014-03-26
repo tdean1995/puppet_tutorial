@@ -10,6 +10,13 @@ node 'dean-ubu' {
 }
 
 node 'dean-aws1' {
+  cron { 'Back up cat-pictures':
+    command => '/usr/bin/rsync -az /var/www/cat-pictures/ /cat-pictures-backup/',
+    hour => '04',
+    minute => '00',
+  }
+
+
   exec { 'Run my arbitrary command':
     command => '/bin/echo I ran this command on `/bin/date` > /tmp/command.output.txt',
   }
