@@ -10,6 +10,8 @@ node 'dean-ubu' {
 }
 
 node 'dean-aws1' {
+  include cron-update
+
   cron { 'Back up cat-pictures':
     command => '/usr/bin/rsync -az /var/www/cat-pictures/ /cat-pictures-backup/',
     hour => '04',
