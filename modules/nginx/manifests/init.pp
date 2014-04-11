@@ -16,6 +16,11 @@ class nginx {
     require => Package['nginx']
 }
 
+  file {'/etc/nginx/sites-enabled/default':
+	ensure => absent,
+  }
+
+  
   file { 'default':
       path => '/etc/nginx/sites-enabled/default',
       source => 'puppet:///modules/nginx/cat-pictures.conf',
