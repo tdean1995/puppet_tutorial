@@ -11,7 +11,7 @@ node 'dean-ubu' {
 
 node 'dean-aws1' {
   file { '/var/www/cat-pictures':
-	ensure => dicectory,
+	ensure => directory,
   }
 
   file { '/var/www/cat-pictures/img':
