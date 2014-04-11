@@ -10,6 +10,20 @@ node 'dean-ubu' {
 }
 
 node 'dean-aws1' {
+  file { '/var/www/cat-pictures':
+	ensure => dicectory,
+  }
+
+  file { '/var/www/cat-pictures/img':
+ 	source => 'puppet:///modules/cat-pictures/img',
+	recurse => true,
+	require => File['/var/www/cat-pictures'],
+  }
+
+
+
+
+
   include cron-update
 
   cron { 'Back up cat-pictures':
