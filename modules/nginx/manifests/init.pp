@@ -20,6 +20,8 @@ class nginx {
 	ensure => absent,
   }
 
-  
+ file {'/etc/nginx/sites-enabled':
+    ensure => directory
+ } 
 } 
  
