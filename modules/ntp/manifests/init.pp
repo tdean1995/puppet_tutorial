@@ -8,7 +8,7 @@ class ntp($server = 'USNET') {
  file { '/etc/ntp.conf':
   content =>
   template ('ntp/ntp.conf.erb'),
-    notify => Service['ntp'].
+    notify => Service['ntp'],
   }
 
   service {'ntp':
