@@ -11,4 +11,3 @@ define nginx::website($site_domain) {
 
 }
 
-:
