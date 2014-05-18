@@ -11,7 +11,7 @@ class ntp($server = 'UNSET') {
     notify => Service['ntp'],
   }
 
-  service {'ntp':
+  service {'ntpd':
     ensure => running,
     enable => true,
     require => [ Package['ntp'],
