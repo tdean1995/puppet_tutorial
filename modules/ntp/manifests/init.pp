@@ -1,5 +1,5 @@
 #Manage NTP Server
-class ntp($server = 'USNET') {
+class ntp($server = 'UNSET') {
 
  package{ 'ntp': 
     ensure => installed,
